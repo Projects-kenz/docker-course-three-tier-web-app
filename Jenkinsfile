@@ -8,7 +8,7 @@ pipeline {
 
 
   environment {
-   BUILD_TAG= "${BUILD_NUMBER}"
+   BUILD_TAG = "${BUILD_NUMBER}"
     DOCKER_CONFIG = "${WORKSPACE}/.docker"
     IMAGE_FRONTEND = "kenzieeiy/python-three-tier-frontend:${BUILD_TAG}"
      IMAGE_BACKEND = "kenzieeiy/python-three-tier-backend:${BUILD_TAG}"
