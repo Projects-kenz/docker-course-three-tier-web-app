@@ -26,7 +26,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         script {
-          sh "docker compose build"
+          sh "export DOCKER_BUILDKIT=0 && docker compose build"
         }
       }
     }
