@@ -7,6 +7,7 @@ pipeline {
 }
 
   environment {
+    DOCKER_CONFIG = "${WORKSPACE}/.docker"
     IMAGE_FRONTEND = "kenzieeiy/python-three-tier:${BUILD_NUMBER}"
      IMAGE_BACKEND = "kenzieeiy/python-three-tier:${BUILD_NUMBER}"
   }
