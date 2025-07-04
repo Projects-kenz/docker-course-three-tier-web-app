@@ -1,10 +1,11 @@
 pipeline {
- agent {
-  docker {
-    image 'ghcr.io/catthehacker/ubuntu:act-latest'
-    args '-v /var/run/docker.sock:/var/run/docker.sock'
+  agent {
+    docker {
+      image 'ghcr.io/catthehacker/ubuntu:act-latest'
+      args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+    }
   }
-}
+
 
   environment {
    BUILD_TAG= "${BUILD_NUMBER}"
