@@ -38,7 +38,7 @@ pipeline {
             docker tag docker-course-three-tier-web-app_frontend ${IMAGE_FRONTEND}-frontend
           """
 
-          docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-cred') {
+          docker.withRegistry('https://index.docker.io/v1/', 'docker-cred') {
             sh "docker push ${IMAGE_BACKEND}-backend"
             sh "docker push ${IMAGE_FRONTEND}-frontend"
           }
